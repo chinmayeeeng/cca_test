@@ -1,0 +1,99 @@
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ mkdir sharada
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~ (a2)
+$ cd sharada
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada (a2)
+$ git clone https://github.com/chinmayeeeng/cloudtest.git
+Cloning into 'cloudtest'...
+remote: Enumerating objects: 9, done.
+remote: Counting objects: 100% (9/9), done.
+remote: Compressing objects: 100% (5/5), done.
+remote: Total 9 (delta 2), reused 3 (delta 1), pack-reused 0
+Receiving objects: 100% (9/9), done.
+Resolving deltas: 100% (2/2), done.
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada (a2)
+$ cd cloudtest
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ ls
+cns.txt
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git status
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   cns.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git add .
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git commit -m "first commit"
+[main 09f8d7b] first commit
+ 1 file changed, 3 insertions(+)
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/chinmayeeeng/cloudtest.git
+   20d68e2..09f8d7b  main -> main
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git fetch origin
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git fetch origin
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 921 bytes | 46.00 KiB/s, done.
+From https://github.com/chinmayeeeng/cloudtest
+   09f8d7b..e22156e  main       -> origin/main
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git pull origin main
+From https://github.com/chinmayeeeng/cloudtest
+ * branch            main       -> FETCH_HEAD
+Updating 09f8d7b..e22156e
+Fast-forward
+ cns.txt | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git checkout -b a5
+Switched to a new branch 'a5'
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (a5)
+$ git reset --soft
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (a5)
+$ git branch -d a5
+error: cannot delete branch 'a5' used by worktree at 'C:/Users/LENOVO/sharada/cloudtest'
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (a5)
+$ git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$ git branch -d a5
+Deleted branch a5 (was e22156e).
+
+LENOVO@LAPTOP-M2LUCC5K MINGW64 ~/sharada/cloudtest (main)
+$
